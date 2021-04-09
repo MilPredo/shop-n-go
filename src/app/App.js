@@ -1,6 +1,7 @@
-import logo from "./logo.svg";
+//import logo from "./logo.svg";
 import "./App.css";
-
+import "./components/ProductCard"
+import ProductCard from "./components/ProductCard";
 function InputLogin(props) {
   return (
     <div className="px-4 pb-4">
@@ -44,15 +45,23 @@ function LoginForm() {
 function Test() {
   return (
     <section className="App h-screen w-full flex justify-center items-center bg-green-500">
-      <div className="w-full max-w-md bg-gray-800">
-        <LoginForm />
-      </div>
+
+      <ProductCard styles={styles.materialCardWithContent}/><ProductCard styles={styles.materialCardWithContent}/>
     </section>
   );
 }
 
 function App() {
-  return <Test />;
+  return (
+      <Test />
+    );
 }
+
+const styles = {
+  materialCardWithContent: {
+    height: 352,
+    width: 359
+  }
+};
 
 export default App;
