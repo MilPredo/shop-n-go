@@ -53,7 +53,8 @@ function Test() {
 function App() {
   return (
     <section class="container mx-auto px-6 py-3 bg-gray-800">
-    
+ 
+
     <SearchBar />
     <main class="my-8 ">
       <div class="container mx-auto px-6">
