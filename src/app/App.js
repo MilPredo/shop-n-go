@@ -2,6 +2,7 @@
 import "./App.css";
 import ProductListing from "./components/ProductListing"
 import SearchBar from "./components/SearchBar"
+import Navigation from './components/Navbar/navbar'
 function InputLogin(props) {
   return (
     <div className="px-4 pb-4">
@@ -61,6 +62,7 @@ function App() {
         <ProductListing />
       </div>
     </main>
+    <Navigation />
     </section>
   );
 }
