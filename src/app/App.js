@@ -2,7 +2,9 @@
 import "./App.css";
 import ProductListing from "./components/ProductListing"
 import SearchBar from "./components/SearchBar"
-import Navigation from './components/Navbar/navbar'
+import Login from "./components/Login"
+import NavBar from './components/NavBar'
+import SignUp from "./components/SignUp"
 function InputLogin(props) {
   return (
     <div className="px-4 pb-4">
@@ -43,26 +45,21 @@ function LoginForm() {
   );
 }
 
-function Test() {
-  return (
-    <section className="App h-screen w-full flex justify-center items-center bg-green-500">
-      <LoginForm />
-    </section>
-  );
-}
 
+//let a="<SearchBar />"
 function App() {
   return (
-    <section class="container mx-auto px-6 py-3 bg-gray-800">
- 
-
-    <SearchBar />
-    <main class="my-8 ">
-      <div class="container mx-auto px-6">
-        <ProductListing />
+    <section className="container mx-auto px-6 py-3 bg-gray-800">
+      <SearchBar/>
+      <div className="flex justify-center ...">
+        
       </div>
-    </main>
-    <Navigation />
+      <SignUp />
+      <main className="my-8 ">
+        <div className="container mx-auto px-6">
+          <ProductListing />
+        </div>
+      </main>
     </section>
   );
 }
