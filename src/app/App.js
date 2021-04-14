@@ -1,10 +1,9 @@
 //import logo from "./logo.svg";
 import "./App.css";
 import ProductListing from "./components/ProductListing"
-import SearchBar from "./components/SearchBar"
-import Login from "./components/Login"
+
 import NavBar from './components/NavBar'
-import SignUp from "./components/SignUp"
+
 
 //let a="<SearchBar />"
 function App() {
