@@ -1,40 +1,34 @@
-import React from 'react'
+import React from 'react';
+import InputForm from './InputForm';
 
 function SignUp() {
     return (
-        <div>
-            <div className="grid min-h-screen place-items-center">
+        <div className="fixed z-10 inset-0 overflow-y-auto">
+            <div className=" grid min-h-screen place-items-center">
                 <div className="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12">
                     <h1 className="text-xl font-semibold">Hello there 👋, <span className="font-normal">please fill in your information to continue</span></h1>
-                    <form className="mt-6">
+                    <form action="" className="mt-6">
                         <div className="flex justify-between gap-3">
                             <span className="w-1/2">
-                                <label for="firstname" className="block text-xs font-semibold text-gray-600 uppercase">Firstname</label>
-                                <input id="firstname" type="text" name="firstname" placeholder="John" autocomplete="given-name" className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+                                <InputForm label="First Name" placeholder="Buboy" name="firstname" required="required" autocomplete="given-name" type="text"/>
                             </span>
                             <span className="w-1/2">
-                                <label for="lastname" className="block text-xs font-semibold text-gray-600 uppercase">Lastname</label>
-                                <input id="lastname" type="text" name="lastname" placeholder="Doe" autocomplete="family-name" className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+                                <InputForm label="Last Name" placeholder="Binababoy" name="lastname" required="required" autocomplete="last-name" type="text"/>
                             </span>
                         </div>
-                        <label for="email" className="block mt-2 text-xs font-semibold text-gray-600 uppercase">E-mail</label>
-                        <input id="email" type="email" name="email" placeholder="john.doe@company.com" autocomplete="email" className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
-                        <label for="password" className="block mt-2 text-xs font-semibold text-gray-600 uppercase">Password</label>
-                        <input id="password" type="password" name="password" placeholder="********" autocomplete="new-password" className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
-                        <label for="password-confirm" className="block mt-2 text-xs font-semibold text-gray-600 uppercase">Confirm password</label>
-                        <input id="password-confirm" type="password" name="password-confirm" placeholder="********" autocomplete="new-password" className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+                        <InputForm label="E-mail" name="email" type="email" placeholder="kikopinako@walangtulogstudioscom" autocomplete="email" required="required"/>
+                        <InputForm label="Password" name="password" placeholder="********" type="password" required="required" />
+                        <InputForm label="confirm password" placeholder="********" name="password-confirm" required="required" type="password"/>
                         <div className="flex justify-start">
-                                <label className="block text-gray-500 font-bold my-4 items-center">
-                                    <input className="leading-loose text-pink-600 top-0" type="checkbox"/>
-                                    
+                            <label className="block text-gray-500 font-bold my-4 items-center">
+                                <input className="leading-loose text-pink-600 top-0" type="checkbox"/>
                                     <span className="ml-2 text-sm py-2 text-gray-500 text-left">Accept the
-                                          <a href=" "
-                                             className="font-semibold text-blue-500 p-1">
+                                        <a href=" " className="font-semibold text-blue-500 p-1">
                                            Terms and Conditions of the site
-                                          </a>and
-                                          <a href=" "
-                                             className="font-semibold text-blue-500 p-1">
-                                            the information data policy.</a>
+                                        </a>and
+                                        <a href=" " className="font-semibold text-blue-500 p-1">
+                                            the information data policy.
+                                        </a>
                                     </span>
                                    
                                 </label>

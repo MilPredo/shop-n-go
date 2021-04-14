@@ -1,52 +1,37 @@
 import React, { Component } from "react";
-
+import InputForm from './InputForm';
+import SearchBar from './SearchBar';
+import SignUp from './SignUp';
+import Login from './Login';
 class NavBar extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       toggle: false,
-      input: "Search",
+      login:false,
+      register:false
+
     };
   }
   onToggle = () => {
     this.setState({ toggle: !this.state.toggle });
   };
-  onChange = (input) => {
-    this.setState({ input });
+  onRegister = () => {
+    this.setState({ register: !this.state.register });
   };
-
+  onLogin=()=>{
+    this.setState({ login: !this.state.login });
+  };
   render() {
     return (
-      <div>
-        <nav className="bg-black">
-          <a href="#a" className=" text-white p-5 ">
-            Logo
-          </a>
-          <a href="#a" className="text-white p-8">
-            Login
-          </a>
-          <a href="#a" className="text-white p-5">
-            Register
-          </a>
-          <button onClick={this.onToggle} className="text-white p-6">
-            Search
-          </button>
-          <div>
-            <div isOpen={this.state.toggle} className="max-w-md">
-              <div>
-                <form action="">
-                  <input type="text" placeholder="Search" className="w-80" />
-                  <button className="text-black">Search</button>
-                  <button onClick={this.onToggle} className="p-1.5">
-                    X
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
+     <nav className="relative">
+        <button onClick={this.onToggle} >Search</button>
+        {this.state.toggle ? <SearchBar ref={(ip) => this.target = ip} />:null}
+        <button onClick={this.onRegister}>Register</button>
+        {this.state.register?<SignUp />:null}
+        <button onClick={this.onLogin}>Login</button>
+     </nav>
     );
   }
 }
