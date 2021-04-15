@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import InputForm from './InputForm';
 import SearchBar from './SearchBar';
 import LoginRegisterForm from './LoginRegisterForm';
-import Login from './Login';
 class NavBar extends Component {
   constructor(props) {
     super(props);
